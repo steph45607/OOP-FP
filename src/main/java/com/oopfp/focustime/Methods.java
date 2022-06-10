@@ -46,8 +46,7 @@ public class Methods {
         return allDeck;
         }
 
-    public static void doneCreating(String title, ArrayList<Card> array, Stage stage) throws IOException {
-        Deck deckName = new Deck(title, array);
+    public static void doneCreating(Deck deck, Stage stage) throws IOException {
         Gson database = new GsonBuilder().setPrettyPrinting().create();
 
         Type listType = new TypeToken<List<Deck>>(){}.getType();
@@ -59,7 +58,7 @@ public class Methods {
             deckList = new ArrayList<>();
         }
 
-        deckList.add(deckName);
+        deckList.add(deck);
         FileWriter writer = new FileWriter("decks.json");
         database.toJson(deckList, writer);
         writer.close();

@@ -8,6 +8,9 @@ public class Card {
     @SerializedName("back")
     private String back;
 
+    public Card() {
+    }
+
     public Card(String front, String back){
         this.front = front;
         this.back = back;

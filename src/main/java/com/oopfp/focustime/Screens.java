@@ -93,6 +93,7 @@ public class Screens{
     }
 
     public static void createDeck(Stage stage){
+        Deck deck = new Deck();
         ArrayList<Card> cards = new ArrayList<>();
 
         stage.setTitle("FocusTime - Create Deck");
@@ -121,9 +122,13 @@ public class Screens{
                 ex.printStackTrace();
             }
         });
+
         FTButton addBtn = new FTButton("+ add", 20);
         addBtn.setOnAction(e -> {
-            cards.add(new Card(frontInput.getText(), backInput.getText()));
+            Card card = new Card();
+            card.setFront(frontInput.getText());
+            card.setBack(backInput.getText());
+            cards.add(card);
             frontInput.clear();
             backInput.clear();
         });
@@ -134,7 +139,9 @@ public class Screens{
                 PopUp.show("Input error", "Deck name can't be empty", "Ok");
             }else{
                 try {
-                    Methods.doneCreating(deckNameInput.getText(), cards, stage);
+                    deck.setTitle(deckNameInput.getText());
+                    deck.setCards(cards);
+                    Methods.doneCreating(deck, stage);
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
