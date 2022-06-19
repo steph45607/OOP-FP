@@ -10,10 +10,9 @@ module com.oopfp.focustime {
     requires eu.hansolo.tilesfx;
     requires com.google.gson;
     requires java.sql;
-    // requires gson;
 
 //    to open the application and be accessible by gson module
 //    so can access the private attributes in the application
-    opens com.oopfp.focustime to gson;
+    opens com.oopfp.focustime to com.google.gson;
     exports com.oopfp.focustime;
 }

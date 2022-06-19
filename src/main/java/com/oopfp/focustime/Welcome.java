@@ -8,6 +8,7 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+// A java application
 public class Welcome extends Application {
 
     @Override
@@ -25,8 +26,10 @@ public class Welcome extends Application {
         input.minWidth(40);
         labelName.setFont(Font.font("Inter", 32));
 
+//        Button will run the MenuScreen screen with passed name from user input
         FTButton btn = new FTButton("Enter", 32);
         btn.setOnAction(e -> {
+//            Check if name is null, pop up error message window
             if(input.getText() == null || input.getText().trim().isEmpty()){
                 PopUp.show("Input error", "Name can't be empty", "Ok");
             }else{
@@ -51,6 +54,7 @@ public class Welcome extends Application {
     }
 
     public static void main(String[] args) {
+//        Launch the application
         launch();
     }
 }

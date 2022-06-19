@@ -9,8 +9,5 @@
         <module name="FocusTime" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="FocusTime" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

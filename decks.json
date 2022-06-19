@@ -1,10 +1,30 @@
 [
   {
-    "title": "Indonesia",
+    "title": "Japanese",
     "cards": [
       {
-        "front": "halo",
-        "back": "hello"
+        "front": "こんにちは",
+        "back": "Hello/Good Day"
+      },
+      {
+        "front": "おなまえは?",
+        "back": "What’s your name?"
+      },
+      {
+        "front": "すみません",
+        "back": "Excuse me/I'm sorry"
+      },
+      {
+        "front": "ちがいます",
+        "back": "No, that's not right"
+      },
+      {
+        "front": "そうです",
+        "back": "Yes, exactly"
+      },
+      {
+        "front": "どっち?",
+        "back": "Which direction?"
       }
     ]
   }
